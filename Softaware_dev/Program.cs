@@ -24,7 +24,9 @@ namespace Softaware_dev
                 switch (option)
                 {
                     case 1:
-                        
+                        string forename = getforename();
+                        string surname = getsurname();
+                       
                         break;
                     case 2:
                         
@@ -40,5 +42,21 @@ namespace Softaware_dev
             }
             while (option != 3);
         }
+
+        // function to get the forename and surname from the user
+        static string getforename()
+        {
+            Console.Write("Enter your forename: ");
+            string forename = Console.ReadLine();
+            return forename;
+        }
+        static string getsurname()
+        {
+            Console.Write("Enter your surname: ");
+            string surname = Console.ReadLine();
+            return surname;
+        }
+
+
     }
 }
