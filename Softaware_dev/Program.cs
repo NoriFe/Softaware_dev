@@ -26,7 +26,7 @@ namespace Softaware_dev
                     case 1:
                         string forename = getforename();
                         string surname = getsurname();
-                       
+                        create_username(forename, surname);
                         break;
                     case 2:
                         
@@ -55,6 +55,12 @@ namespace Softaware_dev
             Console.Write("Enter your surname: ");
             string surname = Console.ReadLine();
             return surname;
+        }
+        // function to create username from the forename and surname
+        static void create_username(string forename, string surname)
+        {
+            string username = forename[0].ToString().ToLower() + surname.ToUpper();
+            Console.WriteLine($"Your username is: {username}");
         }
 
 
